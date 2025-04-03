@@ -10,7 +10,7 @@ const TaskList = () => {
 
   const fetchTasks = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/tasks");
+      const res = await axios.get("https://task-manager-app-v07m.onrender.com/api/tasks");
       setTasks(res.data);
     } catch (error) {
       alert("Failed to load tasks!");
@@ -27,7 +27,7 @@ const TaskList = () => {
   };
 
   const toggleComplete = async (id) => {
-    await axios.put(`http://localhost:5000/api/tasks/${id}`);
+    await axios.put(`https://task-manager-app-v07m.onrender.com/api/tasks/${id}`);
     fetchTasks();
   };
 
@@ -38,7 +38,7 @@ const TaskList = () => {
   };
 
   const saveTask = async (id) => {
-    await axios.put(`http://localhost:5000/api/tasks/edit/${id}`, {
+    await axios.put(`https://task-manager-app-v07m.onrender.com/api/tasks/edit/${id}`, {
       title: editTitle,
       category: editCategory,
     });
@@ -48,7 +48,7 @@ const TaskList = () => {
   };
 
   const deleteTask = async (id) => {
-    await axios.delete(`http://localhost:5000/api/tasks/${id}`);
+    await axios.delete(`https://task-manager-app-v07m.onrender.com/api/tasks/${id}`);
     fetchTasks();
   };
 
