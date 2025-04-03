@@ -16,7 +16,7 @@ const TaskForm = ({ fetchTasks }) => {
 
     const currentTime = new Date().toISOString();
 
-    await axios.post("http://localhost:5000/api/tasks/add", { 
+    await axios.post("https://task-manager-app-v07m.onrender.com/api/tasks/add", { 
       title, 
       category, 
       createdAt: currentTime
