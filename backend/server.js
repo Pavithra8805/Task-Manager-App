@@ -15,7 +15,7 @@ app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/tasks", require("./routes/taskRoutes"));
 app.get('/', (req, res) => {
     res.json({
-        message: "Welcome to the Handcrafted World",
+        message: "Welcome to the Task Manager App!",
         database: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected'
     })
 });
